@@ -1,0 +1,146 @@
+:root {
+  --appno-mint: #00e9c2;
+  --appno-dark: #1b1b1b;
+  --appno-light: #ffffff;
+  --appno-aqua: #bbf7e8;
+  --appno-ink: #282d30;
+  --appno-fog: #f3f6f9;
+
+  --appno-sans: "Poppins", "Helvetica", "Calibri", sans-serif;
+  --appno-mono: "Space Mono", "Courier New", "Courier", monospace;
+}
+
+.slidev-layout {
+  * {
+    font-family: var(--appno-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2,
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  em {
+    text-decoration: underline;
+    text-decoration-thickness: 0.125rem;
+    text-decoration-color: var(--appno-mint);
+    text-underline-offset: 0.5em;
+    font-style: normal;
+  }
+}
+
+.slidev-layout.cover {
+  padding: 5% 0;
+  text-align: start;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    width: 45%;
+    height: 100%;
+    padding: 1.5rem 4rem;
+    background-color: var(--appno-dark);
+  }
+
+  h1 {
+    color: inherit;
+    margin-block: 0;
+  }
+
+  h1 + p {
+    margin-block: 0.5em;
+    font-family: var(--appno-mono);
+    color: var(--appno-fog);
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  img {
+    display: block;
+    max-width: 7rem;
+    margin-block: auto 2rem;
+  }
+
+  footer {
+    margin-block-start: auto;
+    font-size: 0.8rem;
+  }
+}
+
+.slidev-layout.fact {
+  @apply text-center grid h-full;
+  h1 {
+    @apply text-8xl font-700;
+  }
+  h1 + p {
+    @apply font-700 text-2xl;
+  }
+}
+
+.slidev-layout.statement {
+  @apply text-center grid h-full;
+
+  h1 {
+    @apply text-6xl font-700;
+  }
+}
+
+.slidev-layout.quote {
+  @apply grid h-full;
+
+  h1 + p {
+    @apply mt-2;
+  }
+}
+
+.slidev-layout.image-block {
+  display: grid;
+  grid-template-columns: 4rem 1fr 4rem 50%;
+  padding: 0;
+  background-color: var(--appno-dark);
+  color: var(--appno-light);
+
+  img {
+    grid-column: 4;
+    grid-row: 1 / 100;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  > * {
+    grid-column: 2;
+  }
+
+  :first-child {
+    margin-block-start: 4rem;
+  }
+
+  h1::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.25rem;
+    background-color: var(--appno-mint);
+    margin-block: 1em 2rem;
+  }
+
+  p {
+    max-width: 30ch;
+    text-wrap: balance;
+  }
+}
