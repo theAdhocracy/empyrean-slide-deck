@@ -1,11 +1,14 @@
 {
-  "overrides": [
-    {
-      "files": ["slides.md", "pages/*.md"],
-      "options": {
-        "parser": "slidev",
-        "plugins": ["prettier-plugin-slidev"]
-      }
-    }
-  ]
+	"printWidth": 80,
+	"tabWidth": 4,
+	"overrides": [
+		{
+			"files": ["slides.md", "pages/*.md"],
+			"options": {
+				"parser": "slidev",
+				"plugins": ["prettier-plugin-slidev"]
+			}
+		}
+	],
+	"useTabs": true
 }

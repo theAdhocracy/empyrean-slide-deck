@@ -3,37 +3,33 @@
 theme: ./theme
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://images.unsplash.com/photo-1643930490230-28ed220ef0f1?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+background: https://images.unsplash.com/photo-1476673160081-cf065607f449?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
 # some information about your slides, markdown enabled
-title: ADA Updates
+title: The Dialog Element
 # https://sli.dev/custom/highlighters.html
 highlighter: shiki
 # https://sli.dev/guide/drawing
 drawings:
-  persist: false
+    persist: false
 # slide transition: https://sli.dev/guide/animations#slide-transitions
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/guide/syntax#mdc-syntax
 mdc: true
 author: Murray Champernowne
-fonts:
-  serif: Poppins
-  mono: Space Mono
-  weights: "200,400,500,600"
 ---
 
-# ADA Updates
+# \<dialog\>
 
-Changes to Public Sector Legal Requirements in the US
+A simpler, native solution for modals.
 
 <footer>
-  <p>May 2024</p>
+  <p>Feb 2025</p>
 </footer>
 
 ---
 layout: image-block
-image: https://images.unsplash.com/photo-1643930490230-28ed220ef0f1?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-alt: Disabled parking space marked out in yellow lines.
+image: https://images.unsplash.com/photo-1476673160081-cf065607f449?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+alt: Waves washing over golden sands.
 ---
 
 # What Is The ADA?
