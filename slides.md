@@ -27,103 +27,95 @@ A simpler, native solution for modals.
 </footer>
 
 ---
-layout: image-block
-image: https://images.unsplash.com/photo-1476673160081-cf065607f449?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-alt: Waves washing over golden sands.
+layout: code-block
+codepen: GgKboqr
+title: Basic Dialog Element
 ---
 
-# What Is The ADA?
+# A Basic Dialog
 
-A civil rights act enacted in 1990.
+Used to create a sub-window of a web page.
 
-Prohibits discrimination against people based on disabilities.
+Introduces the new `open` HTML attribute.
 
-Split into five sections, known as Titles.
-
-Title II and Title III cover digital and web accessibility.
-
-<!--
-Protected classes includes: autism, blindness, deafness, mobility and cognitive disabilities, etc.
-
-Critically, ADA predates wide internet usage, so the wording has always been ambiguous over what is/isn't covered.
--->
+Closed with the new `dialog` form method.
 
 ---
-layout: image-block
-image: https://images.unsplash.com/photo-1525113030886-3fbc02591711?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-alt: Textured yellow sidewalk used to indicate the edge of a train platform.
+layout: code-block
+codepen: emOwJXO
+title: JS for Dialog Element
 ---
 
-# What Has Changed
+# JavaScript Control Methods
 
-April 8th: Attorney General assigns Title II protections to digital services.
+Three new methods:
 
-April 24th: Department of Justice publishes a final ruling on Title II.
-
-WCAG 2.1 AA level now set as the baseline.
-
-<!--
-It should be noted that the ADA has long stated that 2.1 AA is a minimum, so in reality this shouldn't change much, but it does provide clearer legal recourse for those affected by inaccessible services.
--->
+1. `show()`
+2. `close()`
+3. `showModal()`
 
 ---
-layout: image-block
-image: https://images.unsplash.com/photo-1514426003391-f583e9faa9f9?q=80&w=2568&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-alt: Handrails on a concrete set of stairs.
+layout: code-block
+codepen: ogvrxXW
+title: Modal Element
 ---
 
-# What Does It Mean
+# Modal vs Dialog
 
-Public sector organisations must meet WCAG requirements.
+Dialogs allow interaction with the rest of the page.
 
-Includes any service or programme that receives government funding.
-
-Section 508 should now consider WCAG 2.1 a minimum requirement.
-
-No change to private sector _yet_.
-
-<!--
-E.g. public schools, universities, public services like police, federal programmes like Medicare etc.
-
-Section 508 covers ICT access for federal employees and also includes accessibility provisions. Long required WCAG 2.0 AA, but broad agreement that this new ruling means that it would be impractical to offer anything less than 2.1 AA.
-
-Legal scholars in the US are fully expecting a follow-up ruling to follow a similar pattern for Title III, which would cover all
--->
+Modals do not; everything outside of the `<dialog>` element becomes inert.
 
 ---
-layout: image-block
-image: https://images.unsplash.com/photo-1526277712896-20b3ec88a2eb?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-alt: A sequence of ramps with various people shown walking and running, using them.
+layout: code-block
+codepen: ogvrxYe
+title: Advanced Modal Functionality
 ---
 
-# Timeline
+# Modal Tricks
 
-Changes are effective immediately, but compliance is not.
+Modals have a styleable `:backdrop` psuedo-element.
 
-April 24th, 2026: Organisations with 50,000+ people.
-
-April 24th, 2027: All Title II organisations.
+Automatically provide `Esc` key dismiss.
 
 ---
-layout: image-block
-image: https://images.unsplash.com/photo-1696875135742-c3044510c9e2?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-alt: Typewriter
+layout: code-block
+codepen: EaYBKQW
+title: Modal Light Dismiss
 ---
 
-# Exceptions
+# Light Dismiss
 
-Archived content.
+Commonly expected feature, but not provided by default.
 
-User generated content e.g. comments.
+Can be implemented using a few lines of JavaScript.
 
-Password-protected personal documents.
+Be careful of default browser styles, margins, and padding.
 
-Content with alternative versions or accessibility features.
+---
+layout: code-block
+codepen: EaYBKrv
+title: Modal Background Lock
+---
 
-<!--
-Archived: must have been online prior to 2024 and will never be edited.
+# Inert Background
 
-User-generated content: so long as no payment has been provided in any form. Must be free and voluntary.
+People should not be able to scroll the rest of the page.
 
-Alternatives: allows for failures of certain WCAG criteria so long as it can reasonably be shown that no person is excluded or impacted, or alternative methods exist that would otherwise circumvent the failure.
--->
+Not automatic, but can be done with a single line of CSS, globally.
+
+---
+layout: code-block
+codepen: ogvrxYe
+title: JS for Dialog Element
+---
+
+# Accessibility
+
+Most is provided by default, but you should provide an accessible name.
+
+Implicitly has the ARIA role `dialog`.
+
+If being used as an alert (requires user confirmation or response) then should have `role="alertdialog"` set.
+
+Focus needs to be considered, but should be largely covered.
