@@ -20,8 +20,16 @@ Learn more about [how to use a theme](https://sli.dev/themes/use).
 ---
 theme: serif
 themeConfig:
-  primary: '#5d8392'
+    primary: "#5d8392"
 ---
+```
+
+## Exporting Slides
+
+The global CLI runs into issues, use local by running:
+
+```
+npx slidev export
 ```
 
 ## License
